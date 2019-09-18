@@ -3,12 +3,13 @@
 A business rule defines or constrains some aspect of business. Given a specified context (data) a business rule always resolves to either true or false.
 
 Formal specification:
-// Given <Context> When <condition(s)> Then <Pass> Or <Fail>
+// Given {context} When {condition(s)} Then {pass} Or {fail}
 
 ## Usage ##
 
-1) Directl usage
-```
+1) Direct usage
+
+```php
 $rule = (new BusinessRule())->context([])->condition(function($context){ return true; });
 
 if ($rule->fails()) {
@@ -22,7 +23,7 @@ if ($rule->passes()) {
 
 2) Extend into a separate class. Allows to be re-used (avoid duplication of business logic)
 
-```
+```php
 class AllowAccessRule extends BusinessRule {
     function __construct() {
         $this->condition(function($context){
