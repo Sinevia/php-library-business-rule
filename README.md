@@ -24,6 +24,8 @@ if ($rule->passes()) {
 2) Extend into a separate class. Allows to be re-used (avoid duplication of business logic)
 
 ```php
+
+// 1. Specify the business rule class
 class AllowAccessRule extends BusinessRule {
     function __construct() {
         $this->condition(function($context){
@@ -32,6 +34,7 @@ class AllowAccessRule extends BusinessRule {
     }
 }
 
+// Call the init function with the context
 if (AllowAccessRule::init(['user'=>$user)->fails()) {
     die('You are not allowed access to this part of the website');
 }
