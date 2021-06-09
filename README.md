@@ -34,7 +34,7 @@ class AllowAccessRule extends BusinessRule {
     }
 }
 
-// Call the init function with the context
+// Use the shortcut init function with the context to initialize the rule
 if (AllowAccessRule::init(['user'=>$user)->fails()) {
     die('You are not allowed access to this part of the website');
 }
