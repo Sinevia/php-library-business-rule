@@ -1,5 +1,9 @@
 # PHP Library Business Rule #
 
+![No Dependencies](https://img.shields.io/badge/no-dependencies-success.svg)
+![Tests](https://github.com/Sinevia/php-library-business-rule/workflows/php/badge.svg)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Sinevia/php-library-business-rule) 
+
 A business rule defines or constrains some aspect of business. Given a specified context (data) a business rule always resolves to either true or false.
 
 Formal specification:
